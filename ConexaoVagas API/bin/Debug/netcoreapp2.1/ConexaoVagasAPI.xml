@@ -1,0 +1,1390 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConexaoVagasAPI</name>
+    </assembly>
+    <members>
+        <member name="P:ConexaoVagasAPI.Controllers.AdministradorController._administradorRepository">
+            <summary>
+            Cria um objeto _administradorRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.AdministradorController.Get">
+            <summary>
+            Lista todos os administradores
+            </summary>
+            <returns>Uma lista de administradores e um status code 200 - Ok</returns>
+            dominio/api/Administrador
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.AdministradorController.GetById(System.Int32)">
+            <summary>
+            Busca um Administrador pelo id
+            </summary>
+            <param name="id"> id do Administrador que será buscado </param>
+            <returns> O Administrador buscado, com suas habilidades e candidaturas. </returns>
+            <response code="200">OK</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.AdministradorController.Post(ConexaoVagasAPI.Domains.Administrador)">
+            <summary>
+            Cadastra administrador
+            </summary>
+            <remarks>
+            Body Request:
+            
+                       {
+                        "IdUsuarioNavigation": 
+                            {
+                            "Email": "string",
+                            "Senha": "string",
+                            }
+                        } 
+                
+            </remarks>
+            <returns> Cadastra administrador </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.AdministradorController.AtualizarPorId(System.Int32,ConexaoVagasAPI.Domains.Administrador)">
+            <summary>
+            Atualiza o Administrador pelo token.
+            </summary>
+            <remarks>
+            Body Request
+            
+                    {
+                    "IdUsuarioNavigation": 
+                        {
+                        "Email": "string",
+                        "Senha": "string",
+                        }
+                    } 
+            
+            </remarks>
+            <param name="id"> Id do Administrador </param>
+            <param name="administradorAtualizado"> Id do Administrador </param>
+            <returns></returns>
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.BeneficioController._beneficioRepository">
+            <summary>
+            Cria um objeto _beneficioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficioController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficioController.Get">
+            <summary>
+            Lista Todas os beneficios
+            </summary>
+            <returns>Uma lista de habilidades e um status code 200 - Ok</returns>
+            dominio/api/Habilidade
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficioController.GetById(System.Int32)">
+            <summary>
+            Busca um beneficio pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>O beneficio buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficioController.GetByName(System.String)">
+            <summary>
+            Busca um beneficio através do nome
+            </summary>
+            <param name="name"></param>
+            <returns>O beneficio buscado com suas informações</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficioController.Post(ConexaoVagasAPI.Domains.Beneficio)">
+            <summary>
+            Cadastra um novo beneficio
+            </summary>
+            <param name="novoBeneficio"></param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficioController.Delete(System.Int32)">
+            <summary>
+            Deleta um beneficio pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Um status code</returns>
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.BeneficiosVagasController._beneficioVagaRepository">
+            <summary>
+            Cria um objeto _beneficioVagaVagaRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficiosVagasController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficiosVagasController.Get">
+            <summary>
+            Lista Todas os beneficioVagas
+            </summary>
+            <returns>Uma lista de beneficioVagas e um status code 200 - Ok</returns>
+            dominio/api/Habilidade
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficiosVagasController.GetById(System.Int32)">
+            <summary>
+            Busca um beneficioVaga pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>O beneficioVaga buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficiosVagasController.Post(ConexaoVagasAPI.Domains.BeneficioVaga)">
+            <summary>
+            Cadastra um novo beneficioVaga
+            </summary>
+            <param name="novoBeneficioVaga"></param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.BeneficiosVagasController.Delete(System.Int32)">
+            <summary>
+            Deleta um beneficioVaga pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Um status code</returns>
+        </member>
+        <member name="P:ConexaoVagasAPI.Controllers.CandidatoController._candidatoRepository">
+            <summary>
+            Cria um objeto _candidatoRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidatoController.Get">
+            <summary>
+            Lista todos os candidatos
+            </summary>
+            <returns>Uma lista de candidatos com dados públicos. </returns>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidatoController.GetById(System.Int32)">
+            <summary>
+            Busca um Candidato pelo ID
+            </summary>
+            <param name="id"> ID do Candidato que será buscado </param>
+            <returns> O Candidato buscado, com suas habilidades e candidaturas. </returns>
+            <response code="200">OK</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidatoController.Post(ConexaoVagasAPI.Domains.Candidato)">
+            <summary>
+            Cadastra candidato
+            </summary>
+            <returns> Cadastra candidato </returns>
+            <response code="201">Cadastrado</response>
+            <response code="400">Dados inválidos.</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidatoController.AtualizarPorId(ConexaoVagasAPI.Domains.Candidato,System.Int32)">
+            <summary>
+            Atualiza o Candidato por id [DEV].
+            </summary>
+            <param name="candidatoAtualizado"> Candidato atualizado </param>
+            <param name="id">ID do candidato</param>
+            <response code="201">Atualizado</response>
+            <response code="400">Dados inválidos</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidatoController.AtualizarStatus(System.Int32,System.Int32)">
+            <summary>
+            Atualiza o estado de um candidato por ID.
+            </summary>
+            <response code="204">Atualizado</response>
+            <response code="400">Dados inválidos</response>
+            <returns></returns>
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.CandidaturaController._candidaturaRepository">
+            <summary>
+            Cria um objeto _candidaturaRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidaturaController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidaturaController.Get(System.Int32)">
+            <summary>
+            Lista candidaturas
+            </summary>
+            <returns>Uma candidatura buscada</returns>
+            dominio/api/Candidatura
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidaturaController.GetByCandidato(System.Int32)">
+            <summary>
+            Busca candidaturas de um usuário
+            </summary>
+            <returns>Uma candidatura buscada</returns>
+            dominio/api/Candidatura/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidaturaController.Post(ConexaoVagasAPI.Domains.Candidatura)">
+            <summary>
+            Cadastra uma nova candidatura
+            </summary>
+            <param name="novaCandidatura">Objeto novaCandidatura que será cadastrada</param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+            dominio/api/Candidatura
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.CandidaturaController.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Candidatura)">
+            <summary>
+            Atualiza uma candidatura cadastrada
+            </summary>
+            <param name="id">Id da candidatura que será atualizada</param>
+            <param name="candidaturaAtualizada"></param>
+            <returns>Retorna um status code</returns>
+            dominio/api/Candidatura/1
+        </member>
+        <member name="P:ConexaoVagasAPI.Controllers.EmpresaController._empresaRepository">
+            <summary>
+            Cria um objeto _empresaRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.EmpresaController.Get">
+            <summary>
+            Lista todos as empresas
+            </summary>
+            <returns>Uma lista de empresas e um status code 200 - Ok</returns>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.EmpresaController.GetById(System.Int32)">
+            <summary>
+            Busca um Empresa pelo ID
+            </summary>
+            <param name="id"> ID do Empresa que será buscado </param>
+            <returns> O Empresa buscado, com suas habilidades e candidaturas. </returns>
+            <response code="200">OK</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.EmpresaController.Post(ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Cadastra empresa
+            </summary>
+            <returns> Cadastra empresa </returns>
+            <response code="201">Cadastrado</response>
+            <response code="400">Dados inválidos</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.EmpresaController.AtualizarPorToken(ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Atualiza o Empresa por token.
+            </summary>
+            <response code="204">Atualizado</response>
+            <response code="400">Dados inválidos</response>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.EmpresaController.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Atualiza o Empresa por ID.
+            </summary>
+            <response code="204">Atualizado</response>
+            <response code="400">Dados inválidos</response>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.EmpresaController.AtualizarStatus(System.Int32,System.Int32)">
+            <summary>
+            Atualiza o estado de uma empresa por ID.
+            </summary>
+            <response code="204">Atualizado</response>
+            <response code="400">Dados inválidos</response>
+            <returns></returns>
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.habilidadeCandidatoController._habilidadeCandidatoRepository">
+            <summary>
+            Cria um objeto _habilidadeCandidatoRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.habilidadeCandidatoController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.habilidadeCandidatoController.Get">
+            <summary>
+            Lista todas as HabilidadesCandidatos
+            </summary>
+            <returns>Uma lista de habilidadesCandidato e um status code 200 - Ok</returns>
+            dominio/api/habilidadeCandidato
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.habilidadeCandidatoController.GetById(System.Int32)">
+            <summary>
+            Busca uma habilidadeCandidato através do seu Id
+            </summary>
+            <param name="id">Id da habilidadeCandidato que sera buscada</param>
+            <returns>Uma habilidadeCandidato buscada</returns>
+            dominio/api/habilidadeCandidato/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.habilidadeCandidatoController.GetByIdVaga(System.Int32)">
+            <summary>
+            Busca uma habilidadeCandidato através do Id da vaga
+            </summary>
+            <param name="id">Id da habilidadeCandidato que sera buscada</param>
+            <returns>Uma habilidadeCandidato buscada</returns>
+            dominio/api/candidato/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.habilidadeCandidatoController.Post(ConexaoVagasAPI.Domains.HabilidadeCandidato)">
+            <summary>
+            Cadastra uma nova habilidade
+            </summary>
+            <param name="novaHabilidadeCandidato">Objeto novahabilidadeCandidato que será cadastrada</param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+            dominio/api/habilidadeCandidato
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.HabilidadeController._habilidadeRepository">
+            <summary>
+            Cria um objeto _habilidadeRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeController.Get">
+            <summary>
+            Lista Todas as Habilidades
+            </summary>
+            <returns>Uma lista de habilidades e um status code 200 - Ok</returns>
+            dominio/api/Habilidade
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeController.GetById(System.Int32)">
+            <summary>
+            Busca uma habilidade através do seu Id
+            </summary>
+            <param name="id">Id da habilidade que sera buscada</param>
+            <returns>Uma habilidade buscada</returns>
+            dominio/api/Habilidade/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeController.GetByName(System.String)">
+            <summary>
+            Busca uma habilidade através do nome
+            </summary>
+            <param name="name"></param>
+            <returns>A habilidade buscada com suas informações</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeController.Post(ConexaoVagasAPI.Domains.Habilidade)">
+            <summary>
+            Cadastra uma nova habilidade
+            </summary>
+            <param name="novaHabilidade">Objeto novaHabilidade que será cadastrada</param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+            dominio/api/Habilidade
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeController.Put(System.Int32,ConexaoVagasAPI.Domains.Habilidade)">
+            <summary>
+            Atualiza uma habilidade cadastrada
+            </summary>
+            <param name="id">Id da habilidade que será atualizada</param>
+            <param name="habilidadeAtualizada"></param>
+            <returns>Retorna um status code</returns>
+            dominio/api/Habilidade/1
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.HabilidadeVagaController._habilidadeVagaRepository">
+            <summary>
+            Cria um objeto _habilidadeVagaRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeVagaController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeVagaController.Get">
+            <summary>
+            Lista todas as HabilidadesVagas
+            </summary>
+            <returns>Uma lista de habilidadeVagas e um status code 200 - Ok</returns>
+            dominio/api/HabilidadeVaga
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeVagaController.GetById(System.Int32)">
+            <summary>
+            Busca uma habilidadeVaga através do seu Id
+            </summary>
+            <param name="id">Id da habilidadeVaga que sera buscada</param>
+            <returns>Uma habilidadeVaga buscada</returns>
+            dominio/api/HabilidadeVaga/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeVagaController.GetByIdVaga(System.Int32)">
+            <summary>
+            Busca uma habilidadeVaga através do Id da vaga
+            </summary>
+            <param name="id">Id da habilidadeVaga que sera buscada</param>
+            <returns>Uma habilidadeVaga buscada</returns>
+            dominio/api/HabilidadeVaga/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.HabilidadeVagaController.Post(ConexaoVagasAPI.Domains.HabilidadeVaga)">
+            <summary>
+            Cadastra uma nova habilidade
+            </summary>
+            <param name="novaHabilidadeVaga">Objeto novaHabilidadeVaga que será cadastrada</param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+            dominio/api/HabilidadeVaga
+        </member>
+        <member name="P:ConexaoVagasAPI.Controllers.LoginController._usuarioRepository">
+            <summary>
+            Cria um objeto _usuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.LoginController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.LoginController.Post(ConexaoVagasAPI.Viewmodels.LoginViewmodel)">
+            <summary>
+            Valida o Usuário
+            </summary>
+            <param name="login"> Objeto login que contém o e-mail e a senha do usuário </param>
+            <returns> Retorna uma mensagem de Sucesso ou Inválido </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.MatchController.Refresh">
+            <summary>
+            Deleta e atualiza o matching entre candidatos e vagas.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.MatchController.Get">
+            <summary>
+            lista Matching.
+            </summary>
+            <returns> Lista de Matchings </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.NotificacaoController.ListarTodos">
+            <summary>
+            Busca lista de Notificação.
+            </summary>
+            <returns> Lista de notificações </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.NotificacaoController.GetById(System.Int32)">
+            <summary>
+            Busca uma notificacao pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>A notificacao buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.NotificacaoController.Post(ConexaoVagasAPI.Domains.Notificacao)">
+            <summary>
+            Cadastra uma nova notificacao
+            </summary>
+            <param name="novoNotificacao"></param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.NotificacaoController.Delete(System.Int32)">
+            <summary>
+            Deleta uma notificacao pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Um status code</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.NotificacaoController.DeletarAll">
+            <summary>
+            Deleta todas as notificacoes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ConexaoVagasAPI.Controllers.UsuarioController._usuarioRepository">
+            <summary>
+            Cria um objeto _usuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.UsuarioController.Get">
+            <summary>
+            Lista usuários
+            </summary>
+            <returns> Lista de usuários com dados públicos. </returns>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.UsuarioController.GetByJwt">
+            <summary>
+            Busca o usuário logado.
+            </summary>
+            <returns> Usuário guardado no JWT com seus dados completos. </returns>
+            <response code="200">OK</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.UsuarioController.GetByEmail(System.String)">
+            <summary>
+            Busca um usuario através do email.
+            </summary>
+            <param name="email"></param>
+            <returns>Usuario buscado com dados públicos. </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.UsuarioController.Delete">
+            <summary>
+            Deleta usuário
+            </summary>
+            <returns> Deleta o usuário logado. </returns>
+            <response code="204">No Content</response>
+            <response code="400">Bad Request</response>
+        </member>
+        <member name="F:ConexaoVagasAPI.Controllers.VagaController._vagaRepository">
+            <summary>
+            Cria um objeto _vagaRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.Get">
+            <summary>
+            Lista Todas as Vagas
+            </summary>
+            <returns>Uma lista de vagas e um status code 200 - Ok</returns>
+            dominio/api/Vaga
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.GetById(System.Int32)">
+            <summary>
+            Busca uma vaga através do seu Id
+            </summary>
+            <param name="id">Id da vaga que sera buscada</param>
+            <returns>Uma vaga buscada</returns>
+            dominio/api/Vaga/13
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.GetByEmpresa(System.Int32)">
+            <summary>
+            Busca uma vaga através da empresa
+            </summary>
+            <param name="id">ID da empresa</param>
+            <returns>Vaga</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.GetByFiltro(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Busca uma vaga através de filtros
+            </summary>
+            <param name="titulo">Nome da vaga</param>
+            <param name="id">ID da habilidade</param>
+            <param name="minSalario">Salário mínimo a ser buscado</param>
+            <returns>Vaga</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.Post(ConexaoVagasAPI.Domains.Vaga)">
+            <summary>
+            Cadastra uma nova vaga
+            </summary>
+            <param name="novaVaga">Objeto novaVaga que será cadastrada</param>
+            <returns>Os dados que foram enviados para cadastro e um status code 201 - Created</returns>
+            dominio/api/Vaga
+        </member>
+        <member name="M:ConexaoVagasAPI.Controllers.VagaController.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Vaga)">
+            <summary>
+            Atualiza uma vaga cadastrada
+            </summary>
+            <param name="id">Id da vaga que será atualizada</param>
+            <param name="vagaAtualizada"></param>
+            <returns>Retorna um status code</returns>
+            dominio/api/Vaga/1
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IAdministradorRepository.Listar">
+            <summary>
+            //Lista todos os administradores
+            </summary>
+            <returns>Uma lista de administradores</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IAdministradorRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Admin pelo ID
+            </summary>
+            <param name="id"> ID do Admin que será buscado</param>
+            <returns> O Admin buscado </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IAdministradorRepository.Cadastrar(ConexaoVagasAPI.Domains.Administrador)">
+            <summary>
+            Cadastra um novo Admin no sistema
+            </summary>
+            <param name="novoAdmin"> Objeto com as informações de Cadastro </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IAdministradorRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Administrador)">
+            <summary>
+            Altera um Admin existente
+            </summary>
+            <param name="id"> ID do Admin que será atualizado </param>
+            <param name="adminAtualizado"> Objeto com as novas informações </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidatoRepository.Listar">
+            <summary>
+            //Lista todos os candidatos
+            </summary>
+            <returns>Uma lista de candidatos</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidatoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Candidato pelo ID
+            </summary>
+            <param name="id"> ID do Candidato que será buscado</param>
+            <returns> O Candidato buscado </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidatoRepository.Cadastrar(ConexaoVagasAPI.Domains.Candidato)">
+            <summary>
+            Cadastra um novo Candidato no sistema
+            </summary>
+            <param name="novoCandidato"> Objeto com as informações de Cadastro </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidatoRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Candidato)">
+            <summary>
+            Altera um Candidato existente
+            </summary>
+            <param name="id"> ID do Candidato que será atualizado </param>
+            <param name="candidatoAtualizado"> Objeto com as novas informações </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidatoRepository.MudarStatus(System.Int32,System.Int32)">
+            <summary>
+            Muda o status de usuário do Candidato
+            </summary>
+            <param name="id"> ID do Candidato </param>
+            <param name="status">ID do Status</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidaturaRepository.Listar">
+            <summary>
+            Lista todas as Candidaturas
+            </summary>
+            <returns>Lista das candidaturas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidaturaRepository.ListarPorCandidato(System.Int32)">
+            <summary>
+            Lista todas candidaturas de um usuário.
+            </summary>
+            <param name="idUsuario">ID do Usuário</param>
+            <returns>Lista de candidaturas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidaturaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma candidatura pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Uma candidatura</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidaturaRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Candidatura)">
+            <summary>
+            Altera um Candidato existente
+            </summary>
+            <param name="id"> ID do Candidato que será atualizado </param>
+            <param name="candidatoAtualizado"> Objeto com as novas informações </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidaturaRepository.Cadastrar(ConexaoVagasAPI.Domains.Candidatura)">
+            <summary>
+            Cadastra uma nova candidatura
+            </summary>
+            <param name="novaCandidatura">Objeto novaCandidatura que será cadastrada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.ICandidaturaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma candidatura
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IEmpresaRepository.Listar">
+            <summary>
+            //Lista todos as empresas
+            </summary>
+            <returns>Uma lista de empresas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IEmpresaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Empresa pelo ID
+            </summary>
+            <param name="id"> ID do Empresa que será buscado</param>
+            <returns> O Empresa buscado </returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IEmpresaRepository.Cadastrar(ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Cadastra um novo Empresa no sistema
+            </summary>
+            <param name="novoEmpresa"> Objeto com as informações de Cadastro </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IEmpresaRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Altera um Empresa existente
+            </summary>
+            <param name="id"> ID do Empresa que será atualizado </param>
+            <param name="empresaAtualizado"> Objeto com as novas informações </param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IEmpresaRepository.MudarStatus(System.Int32,System.Int32)">
+            <summary>
+            Muda o status de usuário da Empresa
+            </summary>
+            <param name="id"> ID da Empresa </param>
+            <param name="status">ID do Status</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeCandidatoRepository.Listar">
+            <summary>
+            Lista todas as habilidadeCandidatos
+            </summary>
+            <returns>Uma lista das habilidadeCandidatos</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeCandidatoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma HabilidadeCandidato pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Uma HabilidadeCandidato</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeCandidatoRepository.BuscarPorIdCandidato(System.Int32)">
+            <summary>
+            Busca uma HabilidadeCandidato pelo id da vaga
+            </summary>
+            <param name="id"></param>
+            <returns>Uma HabilidadeCandidato</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeCandidatoRepository.Cadastrar(ConexaoVagasAPI.Domains.HabilidadeCandidato)">
+            <summary>
+            Cadastra uma nova HabilidadeCandidato
+            </summary>
+            <param name="novaHabilidadeCandidato">Objeto novaHabilidadeCandidato que será cadastrada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeCandidatoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma HabilidadeCandidato
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.Listar">
+            <summary>
+            Lista todas as habilidades
+            </summary>
+            <returns>Uma lista das habilidades</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.ListarPorCriador(System.Int32)">
+            <summary>
+            Lista todas as habilidades criadas de um usuário
+            </summary>
+            <returns>Uma lista das habilidades</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma habilidade pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Uma habilidade</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.BuscarPorNome(System.String)">
+            <summary>
+            Busca uma habilidade por nome
+            </summary>
+            <param name="name"></param>
+            <returns>A habilidade buscada com suas informações</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.Cadastrar(ConexaoVagasAPI.Domains.Habilidade)">
+            <summary>
+            Cadastra uma nova habilidade
+            </summary>
+            <param name="novaHabilidade">Objeto novaHabilidade que será cadastrada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Habilidade)">
+            <summary>
+            Atualiza uma habilidade existente
+            </summary>
+            <param name="id"></param>
+            <param name="habilidadeAtualizada"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma habilidade
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeVagaRepository.Listar">
+            <summary>
+            Lista todas as habilidadeVagas
+            </summary>
+            <returns>Uma lista das habilidadeVagas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeVagaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma habilidadeVaga pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Uma habilidadeVaga</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeVagaRepository.BuscarPorIdVaga(System.Int32)">
+            <summary>
+            Busca uma habilidadeVaga pelo id da vaga
+            </summary>
+            <param name="id"></param>
+            <returns>Uma habilidadeVaga</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeVagaRepository.Cadastrar(ConexaoVagasAPI.Domains.HabilidadeVaga)">
+            <summary>
+            Cadastra uma nova habilidadeVaga
+            </summary>
+            <param name="novaHabilidadeVaga">Objeto novaHabilidadeVaga que será cadastrada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IHabilidadeVagaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma habilidadeVaga
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IMatchingRepository.Listar">
+            <summary>
+            Lista as notificacoes
+            </summary>
+            <returns>Uma lista das notificacoes</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IMatchingRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma matching pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>A matching buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IMatchingRepository.Cadastrar(ConexaoVagasAPI.Domains.Matching)">
+            <summary>
+            Cadastra uma nova matching
+            </summary>
+            <param name="novoMatching"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IMatchingRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma matching por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IMatchingRepository.DeletarAll">
+            <summary>
+            Deleta todas as matchings
+            </summary>
+        </member>
+        <member name="T:ConexaoVagasAPI.Interfaces.INotificacaoRepository">
+            <summary>
+            Interface responsável pelo NotificacaoRepository
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.INotificacaoRepository.Listar">
+            <summary>
+            Lista as notificacoes
+            </summary>
+            <returns>Uma lista das notificacoes</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.INotificacaoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma notificacao pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>A notificacao buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.INotificacaoRepository.Cadastrar(ConexaoVagasAPI.Domains.Notificacao)">
+            <summary>
+            Cadastrar uma nova notificacao
+            </summary>
+            <param name="novoNotificacao"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.INotificacaoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma notificacao por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.INotificacaoRepository.DeletarAll">
+            <summary>
+            Deleta todas as notificacoes
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todas as usuarios
+            </summary>
+            <returns>Lista de usuários</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Um usuário</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuario
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IUsuarioRepository.BuscarPorEmail(System.String)">
+            <summary>
+            Busca um usuario pelo email
+            </summary>
+            <param name="email"></param>
+            <returns>Um usuário</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.Listar">
+            <summary>
+            Lista todas as vagas
+            </summary>
+            <returns>Uma lista das candidaturas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.ListarPorEmpresa(System.Int32)">
+            <summary>
+            Lista todas as vagas de uma empresa
+            </summary>
+            <param name="id">ID da empresa</param>
+            <returns>Lista das vagas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.ListarPorFiltro(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Busca uma vaga ppor filtro
+            </summary>
+            <param name="titulo">Titulo da vaga a ser filtrada</param>
+            <param name="minSalario">Salário Mínimo</param>
+            <param name="idHabilidade">ID da Habilidade a ser filtrada</param>
+            <returns>Vaga</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma vaga pelo id
+            </summary>
+            <param name="id">ID da vaga</param>
+            <returns>Uma candidatura</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Vaga)">
+            <summary>
+            Atualiza uma vaga existente
+            </summary>
+            <param name="id"></param>
+            <param name="vaga">Vaga atualizada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.Cadastrar(ConexaoVagasAPI.Domains.Vaga)">
+            <summary>
+            Cadastra uma nova vaga
+            </summary>
+            <param name="vaga">Nova vaga que será cadastrada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interfaces.IVagaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma habilidade
+            </summary>
+            <param name="id">ID da vaga</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioRepository.Listar">
+            <summary>
+            //Lista todos os beneficios
+            </summary>
+            <returns>Uma lista de beneficios</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioRepository.ListarPorCriador(System.Int32)">
+            <summary>
+            //Lista todos os beneficios criados de um usuário
+            </summary>
+            <returns>Uma lista de beneficios</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um beneficio pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>O beneficio buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioRepository.BuscarPorNome(System.String)">
+            <summary>
+            Busca um beneficio por nome
+            </summary>
+            <param name="name"></param>
+            <returns>O beneficio buscada com suas informações</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioRepository.Cadastrar(ConexaoVagasAPI.Domains.Beneficio)">
+            <summary>
+            Cadastra um novo beneficio
+            </summary>
+            <param name="novoBeneficio"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um beneficio pelo id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioVagaRepository.Listar">
+            <summary>
+            //Lista todos os beneficiosVagas
+            </summary>
+            <returns>Uma lista de beneficiosVagas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioVagaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um beneficioVaga pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>O beneficioVaga buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioVagaRepository.Cadastrar(ConexaoVagasAPI.Domains.BeneficioVaga)">
+            <summary>
+            Cadastra um novo beneficioVaga
+            </summary>
+            <param name="novoBeneficioVaga"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Interface.IBeneficioVagaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um beneficioVaga pelo id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:ConexaoVagasAPI.Models.Geocode">
+            <summary>
+            Objeto da HERE Geocoding API.
+            API para pegar o latlong de um lugar através do nome.
+            https://developer.here.com/documentation/geocoding-search-api/dev_guide/index.html
+            </summary>
+        </member>
+        <member name="T:ConexaoVagasAPI.Models.HereRouting.Routes">
+            <summary>
+            Objeto da HERE Routing API.
+            API para calcular a distância entre dois pontos, usando latlong.
+            https://developer.here.com/documentation/routing-api/8.8.0/dev_guide/index.html
+            </summary>
+        </member>
+        <member name="T:ConexaoVagasAPI.Models.Local">
+            <summary>
+            Objeto da API do viacep.
+            https://viacep.com.br/
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.AdministradorRepository.Listar">
+            <summary>
+            Lista todos os administradores
+            </summary>
+            <returns>Lista dos administradores</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.AdministradorRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um administrador pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>O administrador buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.AdministradorRepository.Cadastrar(ConexaoVagasAPI.Domains.Administrador)">
+            <summary>
+            Cadstra um novo administrador
+            </summary>
+            <param name="novoAdmin"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.BeneficioVagasRepository.Listar">
+            <summary>
+            Lista todos os BeneficioVaga
+            </summary>
+            <returns>Lista dos BeneficioVagas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.BeneficioVagasRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um BeneficioVaga pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>O BeneficioVaga buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.BeneficioVagasRepository.Cadastrar(ConexaoVagasAPI.Domains.BeneficioVaga)">
+            <summary>
+            Cadastra um novo BeneficioVaga
+            </summary>
+            <param name="novoBeneficioVaga"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.BeneficioVagasRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um BeneficioVaga
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.CandidatoRepository.Listar">
+            <summary>
+            Lista todos os candidatos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.CandidatoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um candidato por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.CandidatoRepository.Cadastrar(ConexaoVagasAPI.Domains.Candidato)">
+            <summary>
+            Cadastra um novo candidato
+            </summary>
+            <param name="novoCandidato"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.CandidatoRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Candidato)">
+            <summary>
+            Atualiza o candidato por id
+            </summary>
+            <param name="id"></param>
+            <param name="candidatoAtualizado"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.CandidatoRepository.MudarStatus(System.Int32,System.Int32)">
+            <summary>
+            Muda o status de um candidato
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.EmpresaRepository.Listar">
+            <summary>
+            Listar todas as empresas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.EmpresaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma empresa pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>A empresa buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.EmpresaRepository.Cadastrar(ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Cadastra uma nove empresa
+            </summary>
+            <param name="novaEmpresa"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.EmpresaRepository.Atualizar(System.Int32,ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Atualiza uma empresa pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="empresaAtualizada"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.EmpresaRepository.MudarStatus(System.Int32,System.Int32)">
+            <summary>
+            Muda o status de uma empresa
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeCandidatoRepository.Listar">
+            <summary>
+            Lista tods as habilidadeCandidatos
+            </summary>
+            <returns>Lista das habilidadeCandidatos</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeCandidatoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma HabilidadeCandidato através do ID
+            </summary>
+            <param name="id"></param>
+            <returns>A HabilidadeCandidato buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeCandidatoRepository.BuscarPorIdCandidato(System.Int32)">
+            <summary>
+            Busca uma HabilidadeCandidato através do Id da candidato
+            </summary>
+            <param name="id"></param>
+            <returns>A HabilidadeCandidato buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeCandidatoRepository.Cadastrar(ConexaoVagasAPI.Domains.HabilidadeCandidato)">
+            <summary>
+            Cadastra uma nova HabilidadeCandidato
+            </summary>
+            <param name="novaHabilidadeCandidato"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeCandidatoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma HabilidadeCandidato existente
+            </summary>
+            <param name="id">ID da HabilidadeCandidato que será deletada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeVagaRepository.Listar">
+            <summary>
+            Lista tods as habilidadesVagas
+            </summary>
+            <returns>Lista das habilidadesVagas</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeVagaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma habilidadeVaga através do ID
+            </summary>
+            <param name="id"></param>
+            <returns>A habilidadeVaga buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeVagaRepository.BuscarPorIdVaga(System.Int32)">
+            <summary>
+            Busca uma habilidadeVaga através do Id da vaga
+            </summary>
+            <param name="id"></param>
+            <returns>A habilidadeVaga buscada</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeVagaRepository.Cadastrar(ConexaoVagasAPI.Domains.HabilidadeVaga)">
+            <summary>
+            Cadastra uma nova habilidadeVaga
+            </summary>
+            <param name="novaHabilidadeVaga"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.HabilidadeVagaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma habilidadeVaga existente
+            </summary>
+            <param name="id">ID da habilidadeVaga que será deletada</param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.MatchingRepository.Listar">
+            <summary>
+            Lista das notificacoes
+            </summary>
+            <returns>Uma lista de notificacoes</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.MatchingRepository.Cadastrar(ConexaoVagasAPI.Domains.Matching)">
+            <summary>
+            Cadastrar nova matching
+            </summary>
+            <param name="novoMatching"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.MatchingRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma matching pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>A matching buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.MatchingRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar uma matching por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.MatchingRepository.DeletarAll">
+            <summary>
+            Deletar todas as notificacoes
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.NotificacaoRepository.Listar">
+            <summary>
+            Lista das notificacoes
+            </summary>
+            <returns>Uma lista de notificacoes</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.NotificacaoRepository.Cadastrar(ConexaoVagasAPI.Domains.Notificacao)">
+            <summary>
+            Cadastrar nova notificacao
+            </summary>
+            <param name="novoNotificacao"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.NotificacaoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma notificacao pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>A notificacao buscado</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.NotificacaoRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar uma notificacao por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.NotificacaoRepository.DeletarAll">
+            <summary>
+            Deletar todas as notificacoes
+            </summary>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.UsuarioRepository.Listar">
+            <summary>
+            Lista todos os usuarios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.UsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuario por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.UsuarioRepository.BuscarPorEmail(System.String)">
+            <summary>
+            Busca um usuario através do email. Usado como helper para fazer login.
+            </summary>
+            <param name="email"></param>
+            <returns>O usuario buscado com suas informações</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Repositories.UsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuario por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.BuscarLocal(System.String)">
+            <summary>
+            use um CEP para conseguir info. sobre um lugar.
+            </summary>
+            <param name="cep">CEP do lugar</param>
+            <returns>Objeto Local com info. sobre o lugar (Viacep)</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.BuscarEndereco(System.String)">
+            <summary>
+            Retorna um EnderecoDomain usando de um CEP.
+            </summary>
+            <param name="cep"></param>
+            <returns>Objeto Endereco com info. sobre o lugar (Domain)</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.GeocodeParaRouting(ConexaoVagasAPI.Models.Geocode,ConexaoVagasAPI.Models.Geocode)">
+            <summary>
+            Retorna um objeto route para calculo de rota entre dois pontos.
+            </summary>
+            <param name="geocodeOrigin"></param>
+            <param name="geocodeDestination"></param>
+            <returns>Route</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.DistanciaCep(System.String,System.String)">
+            <summary>
+            Calcula a distância entre dois CEPs.
+            </summary>
+            <param name="cep1">Origem</param>
+            <param name="cep2">Destino</param>
+            <returns>Distância (KMs)</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.Distancia(System.Double,System.Double,System.Double,System.Double,System.Char)">
+            <summary>
+            Calcula a distância usando de latlong.
+            </summary>
+            <param name="lat1"></param>
+            <param name="lon1"></param>
+            <param name="lat2"></param>
+            <param name="lon2"></param>
+            <param name="unit">Unidade de medição.
+                               K = Kilômetros
+                               M = Milhas
+                               N = Milhas Náuticas</param>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.Deg2Rad(System.Double)">
+            <summary>
+            Converte graus para radianos.
+            </summary>
+            <param name="deg"></param>
+            <returns>Radianos</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.EnderecoUtils.Rad2Deg(System.Double)">
+            <summary>
+            Converte radianos para graus.
+            </summary>
+            <param name="rad"></param>
+            <returns>Graus</returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.StringUtils.Criptografar(System.String)">
+            <summary>
+            Criptografa a senha usando de PBKDF2.
+            https://en.wikipedia.org/wiki/PBKDF2
+            </summary>
+            <param name="senha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Utils.StringUtils.VerificarSenha(System.String,System.String)">
+            <summary>
+            Compara duas senhas, uma sendo o input do usuário, e a segunda a senha criptografada no banco
+            </summary>
+            <param name="senhaInput">Senha digitada pelo usuário.</param>
+            <param name="senhaSalvada">Senha salva no banco de dados.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ConexaoVagasAPI.Viewmodels.CandidatoViewmodel.#ctor(ConexaoVagasAPI.Domains.Candidato)">
+            <summary>
+            Construtor do Viewmodel que aceita um objeto Domain para
+            transformar em um objeto sem informmaçoes sensíveis (EmpresaViewModel).
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:ConexaoVagasAPI.Viewmodels.EmpresaViewmodel.#ctor(ConexaoVagasAPI.Domains.Empresa)">
+            <summary>
+            Construtor do Viewmodel que aceita um objeto Domain para
+            transformar em um objeto sem informmaçoes sensíveis (EmpresaViewModel).
+            </summary>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

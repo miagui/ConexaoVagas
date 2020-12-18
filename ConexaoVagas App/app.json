@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Conexão Vagas",
+    "slug": "ConexaoVagas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/favicon-red.png",
+    "splash": {
+      "image": "./assets/imgs/logo-dark.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#131315"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon-red.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ontimedevs.ConexaoVagas"
+    },
+    "web": {
+      "favicon": "./assets/favicon-red.png"
+    }
+  }
+}

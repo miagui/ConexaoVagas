@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+body{
+    background: #191919;
+}
+
+.conexao-frase{
+    max-width: 500px;;
+}
+.conexao-frase p{
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 46px;
+}
+
+.nav > * {
+    margin-left: 1em;
+    color: #FFFFFF;
+
+}
+
+.nav > *:hover {
+    color: #ebebeb;
+}
+
+ 
+

@@ -1,0 +1,30 @@
+.button-normal{
+    background-color: #CD322B;
+    color:white;
+    font-weight: 500;
+    padding: 0.5em 2em 0.5em 2em;
+    border-radius: 5px;
+    border: none;
+    border-style: none;
+} 
+.button-normal:hover{
+    background-color: #b93129;
+    border: none;
+    border-style: none;
+}
+
+.button-ghost{
+    background-color: transparent;
+    color: #CD322B;
+    font-weight: 500;
+    padding: 0.5em 2em 0.5em 2em;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 0px 0px 0px 2px #CD322B;
+} 
+.button-ghost:hover{
+    background-color: #b93129;
+    color: white;
+    border: none;
+    
+}

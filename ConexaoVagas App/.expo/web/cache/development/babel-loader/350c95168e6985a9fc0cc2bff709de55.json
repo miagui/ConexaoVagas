@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function Home() {}","map":{"version":3,"sources":["C:/Users/Matheus/Documentos/Projetos/Programacao/React Native/ConexaoVagas-App/screens/Home.tsx"],"names":["Home"],"mappings":"AAEA,OAAO,SAASA,IAAT,GAAgB,CAEtB","sourcesContent":["import React from 'react';\r\n\r\nexport function Home() {\r\n\r\n}"]},"metadata":{},"sourceType":"module"}

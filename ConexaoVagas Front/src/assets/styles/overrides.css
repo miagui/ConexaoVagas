@@ -1,0 +1,6 @@
+/* react-alerts */
+#__react-alert__ span {
+    /* Desativa o Uppercase*/
+    text-transform: none;
+}
+

@@ -1,0 +1,159 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.line-vertical {
+    height: 1px;
+}
+
+.line-horizontal {
+    width: 1px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+
+.bg-primary-color {
+    background-color: #CD322B;
+}
+
+.bg-secondary-color {
+    background-color: #131315;
+}
+
+.text-primary-color {
+    color: #CD322B;
+}
+
+.text-secondary-color {
+    color: #131315;
+}
+
+.border-primary-color {
+    border-color: #CD322B;
+}
+
+.text-green-1 {
+    color: rgb(0, 155, 0);
+}
+
+.bg-cv-gray {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.force-center {
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+.force-text-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.mt-1\/2 {
+    margin-top: 50%;
+    margin-bottom: 50%
+}
+
+.w-50em {
+    width: 50em;
+}
+
+.hover-gray-100:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+.hover-gray-200:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.hover-gray-300:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+    cursor: pointer;
+}
+
+.hover-gray-300:hover {
+    background-color: rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+}
+
+.text-link {
+    color: #1A0DAB;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Salvar e editar input */
+.check-edit:checked~div {
+    display: block;
+}
+
+.check-edit:checked~p {
+    display: none;
+}
+
+.check-edit~div {
+    display: none;
+}
+
+.check-edit~p {
+    display: block;
+}
+
+.check-edit:checked~.input-editar {
+    display: none;
+}
+
+.check-edit~.input-editar {
+    display: block;
+}
+
+.check-edit:checked~.input-salvar {
+    display: block;
+}
+
+.check-edit~.input-salvar {
+    display: none;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container>label {
+    cursor: pointer;
+    transition: 0.1ms;
+}
+
+.input-container>label:hover {
+    color: rgb(92, 92, 92);
+    transition: 0.1ms;
+}
+
+.input-container>label>i {
+    font-size: 1.25em;
+}
+
+.input-container>label>* {
+    vertical-align: middle;
+    cursor: pointer;
+}

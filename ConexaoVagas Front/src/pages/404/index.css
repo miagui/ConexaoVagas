@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap");
+
+.css{
+    height:100vh;
+}
+
+.foto{
+    height:60vh;
+}
+.texto{
+
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size:34px;
+    font-weight:700;
+    color:#70706f;
+    letter-spacing: 2.5px;
+}

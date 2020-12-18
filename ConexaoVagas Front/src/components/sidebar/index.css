@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+* {
+  -webkit-transition: 0.33s ease;
+  transition: 0.33s ease;
+}
+
+.rela-block {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.side-bar {
+  z-index: 100;
+  position: fixed;
+  width: 80px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #131315;
+  box-shadow: 4px 0px 25px -1px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  -webkit-transition: 0.33s ease;
+  transition: 0.33s ease;
+}
+
+.side-bar:hover{
+  width: 300px;
+}
+
+.side-bar .logoSenai{
+display:none;
+transition: 1.5s;
+}
+
+.side-bar:hover .logoSenai{
+ display: block;
+ transition: 1.5s;
+  }
+  
+.side-bar:hover .side-button::before {
+  left: 6%;
+  -webkit-transition: 0.33s ease, left 0.25s 0.15s ease;
+  transition: 0.33s ease, left 0.25s 0.15s ease;
+}
+
+.side-container {
+  position: absolute;
+  width: 100%;
+}
+.side-container.top {
+  height: 100px;
+  top: 1%;
+}
+.side-container.middle {
+  padding-top: 10px;
+  height: 80%;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.hover-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 2;
+  cursor: pointer;
+  -webkit-transition: 0s ease, height 0.33s ease, width 0.33s ease;
+  transition: 0s ease, height 0.33s ease, width 0.33s ease;
+}
+.hover-svg:hover {
+  stroke: #fff;
+}
+.side-button {
+  height: 60px;
+  margin: 5px 0;
+  background-color: #131315;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;  font-weight: 400;
+}
+
+.side-button:hover {
+  background-color: #27272b;
+}
+
+.side-button::before {
+  position: absolute;
+  top: 50%;
+  left: -300px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.33s ease;
+  transition: 0.33s ease;
+}
+
+.side-button::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-size: cover !important;
+  -webkit-transition: 0.33s ease;
+  transition: 0.33s ease;
+}
+
+/*  MENU ADM  */
+
+.side-button.a-dashboard::before {
+  content: "Dashboard";
+  color:white;
+}
+.side-button.a-dashboard:after {
+  background: url(../../assets/icons/dashboard.svg) no-repeat center;
+}
+
+.side-button.a-lista-candidato::before {
+  content: "Candidatos";
+  color:white;
+}
+.side-button.a-lista-candidato:after {
+  background: url(../../assets/icons/user-3-line.svg) no-repeat center;
+}
+
+.side-button.a-gerenciamento-empresas::before {
+  content: "Empresas";
+  color:white;
+}
+.side-button.a-gerenciamento-empresas:after {
+  background: url(../../assets/icons/building-line.svg) no-repeat center;
+}
+
+/*  MENU EMPRESA  */
+
+.side-button.e-dashboard::before {
+  content: "Dashboard";
+  color:white;
+}
+.side-button.e-dashboard:after {
+  background: url(../../assets/icons/dashboard.svg) no-repeat center;
+}
+
+.side-button.e-suas-vagas::before {
+  content: "Minhas Vagas";
+  color:white;
+}
+.side-button.e-suas-vagas:after {
+  background: url(../../assets/icons/vagas.svg) no-repeat center;
+}
+
+.side-button.e-cadastrar-vagas::before {
+  content: "Cadastrar Vaga";
+  color:white;
+}
+.side-button.e-cadastrar-vagas:after {
+  background: url(../../assets/icons/add.svg) no-repeat center;
+}
+
+.side-button.e-editar-perfil::before {
+  content: "Minha Empresa";
+  color:white;
+}
+.side-button.e-editar-perfil:after {
+  background: url(../../assets/icons/building-line.svg) no-repeat center;
+}
+
+/*  MENU CANDIDATO  */
+.side-button.vagas::before {
+  content: "Buscar por vagas";
+  color:white;
+}
+.side-button.vagas:after {
+  background: url(../../assets/icons/search-line.svg) no-repeat center;
+}
+.side-button.c-historico-candidaturas::before {
+  content: "Inscrições";
+  color:white;
+}
+.side-button.c-historico-candidaturas:after {
+  background: url(../../assets/icons/historico.svg) no-repeat center;
+}
+
+.side-button.c-historico-candidaturas::before {
+  content: "Inscrições";
+  color:white;
+}
+.side-button.c-historico-candidaturas:after {
+  background: url(../../assets/icons/historico.svg) no-repeat center;
+}
+/* .side-button.c-meu-perfil::before {
+  content: "Meu Perfil";
+  color:white;
+}
+.side-button.c-meu-perfil:after {
+  background: url(../../assets/icons/user-3-line.svg) no-repeat center;
+} */
+
+.side-button.c-editar-perfil::before {
+  content: "Meu Perfil";
+  color:white;
+}
+.side-button.c-editar-perfil:after {
+  background: url(../../assets/icons/user-3-line.svg) no-repeat center;
+}
+
+/* . */
+
+.side-button.logout::before {
+  content: "Logoff";
+  color:white;
+
+}
+.side-button.logout:after {
+  background: url(../../assets/icons/logout.svg) no-repeat center;
+}
+
+.side-button.login::before {
+  content: "Login";
+  color:white;
+
+}
+.side-button.login:after {
+  background: url(../../assets/icons/login-circle-line.svg) no-repeat center;
+}
+
+.side-button.cadastro::before {
+  content: "Cadastro";
+  color:white;
+
+}
+.side-button.cadastro:after {
+  background: url(../../assets/icons/user-add-line.svg) no-repeat center;
+}
+
+.side-button.senai::before {
+  content: "";
+  color:white;
+}
+.side-button.senai:after {
+  background: url(../../assets/imgs/logo-senai-principal.png) no-repeat center;
+}
+
+.logoSenai {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  max-width: 50%;
+  margin-left:18%
+}
+
+.logoSenai:before {
+  margin-top:5em;
+}

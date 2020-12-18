@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+.fundo{
+    background-image: url(../../assets/imgs/imagem2.jpg);
+    width:100%;
+    background-position-y: center;
+    padding:1.5em;
+}
+.senai{
+    position:relative;
+    width:205px;
+    height:55px;
+    top:30%;
+    left:20%;
+}
+.logo{
+    position:relative;
+    top:-500px;
+
+}
+
+ 
+.foto-login{
+    width:80%;
+    height:100vh;
+}
+
+
+
+.input{
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    font-weight:700;
+    background:#fff;
+}
+
+.senha {
+    width:80%;
+}
+
+.escrito{
+    color:white;
+    font-size:50px
+}
+
+/* @media(max-width: 1100px)
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 80%;
+    }
+}
+
+
+@media(min-width:1101px )
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 140%;
+    }
+}
+
+@media(min-width:1200px )
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 200%;
+    }
+}
+
+@media(min-width:1300px )
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 300%;
+    }
+}
+
+@media(min-width:1350px )
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 450%;
+    }
+}
+@media(min-width:1370px )
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 550%;
+    }
+}
+@media(min-width:1400px )
+{
+    .fundo{
+        background-image: url(../../assets/imgs/imagem4.jpg);
+        height:100vh;
+        width:100%;
+        background-position-y: center;
+        background-position-x: 900%;
+    }
+} */
