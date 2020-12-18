@@ -1,0 +1,2097 @@
+{
+	"info": {
+		"_postman_id": "64a47095-ae31-4997-8489-260c59915cbc",
+		"name": "Conexão Vagas - V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"Email\": \"matheus.nasci2002@hotmail.com\",\r\n        \"Senha\": \"matheus123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administrador",
+			"item": [
+				{
+					"name": "Administrador.Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NTk3NDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.8pr5at-ihylkk4cTeiLnAsxIOuHSXxxWNulh2WjwAag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Administrador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrador.ListarPorid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NTk3NDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.8pr5at-ihylkk4cTeiLnAsxIOuHSXxxWNulh2WjwAag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Administrador/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrador.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NTk3NDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.8pr5at-ihylkk4cTeiLnAsxIOuHSXxxWNulh2WjwAag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IdUsuarioNavigation\": \r\n        {\r\n            \"Email\": \"adminstrado2r@gmail.com\",\r\n            \"Senha\": \"adm123\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Administrador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrador.Atualiza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NTk3NDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.8pr5at-ihylkk4cTeiLnAsxIOuHSXxxWNulh2WjwAag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IdUsuarioNavigation\": \r\n        {\r\n            \"Email\": \"adminstrador2@gmail.com\",\r\n            \"Senha\": \"adm1234\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Administrador/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Beneficio",
+			"item": [
+				{
+					"name": "Beneficio.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Beneficio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Beneficio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Beneficio.ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Beneficio/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Beneficio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Beneficio.ListarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCriadoPor\": null,\r\n    \"nomeBeneficio\": \"Teste1\",\r\n    \"idCriadoPorNavigation\": null,\r\n    \"beneficioVaga\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Beneficio/pesquisarBeneficio/FGTS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Beneficio",
+								"pesquisarBeneficio",
+								"FGTS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Beneficio.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NTk3NDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.8pr5at-ihylkk4cTeiLnAsxIOuHSXxxWNulh2WjwAag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCriadoPor\": null,\r\n    \"nomeBeneficio\": \"Teste\",\r\n    \"idCriadoPorNavigation\": null,\r\n    \"beneficioVaga\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Beneficio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Beneficio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Beneficio.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NTk3NDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.8pr5at-ihylkk4cTeiLnAsxIOuHSXxxWNulh2WjwAag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Beneficio/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Beneficio",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BeneficioVaga",
+			"item": [
+				{
+					"name": "BeneficioVagas.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/BeneficiosVagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"BeneficiosVagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BeneficioVagas.ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/BeneficiosVagas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"BeneficiosVagas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BeneficioVagas.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBeneficio\": 2,\r\n    \"idVaga\": 2,\r\n    \"idBeneficioNavigation\": null,\r\n    \"idVagaNavigation\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/BeneficioVagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"BeneficioVagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BeneficioVagas.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/BeneficioVagas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"BeneficioVagas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candidato",
+			"item": [
+				{
+					"name": "Candidato.Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NjE1NTgsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.qgrjD8Ew3s0hK7mZ9ksxbjbZncyPst_lfcK_H7vHgrs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Candidato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidato.BuscarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NjE1NTgsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.qgrjD8Ew3s0hK7mZ9ksxbjbZncyPst_lfcK_H7vHgrs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Candidato/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidato.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Curso\": \"Desenvolvimento de Sistemas\",\r\n    \"Nome\": \"Matheus\",\r\n    \"Sobrenome\": \"Emorge\",\r\n    \"Matricula\": \"15121105\",\r\n    \"Cpf\": \"050.859.728-56\",\r\n    \"Rg\": \"12.548.460-4\",\r\n    \"TelefoneCandidato\": \"(16) 2626-2020\",\r\n    \"CelularCandidato\": \"(11) 98611-6715\",\r\n    \"DataNascimento\": \"2020-09-14T17:19:05.803Z\",\r\n    \"IdEnderecoNavigation\": \r\n    {\r\n        \"Cep\": \"01201000\"\r\n    },\r\n    \"IdUsuarioNavigation\": \r\n    {\r\n        \"Email\": \"matheus.nasci2002@hotmail.com\",\r\n        \"Senha\": \"matheus123\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Candidato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidato.Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Matheus/Downloads/moe.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.15.88:52525/api/Candidato/Img/upload/1049",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"15",
+								"88"
+							],
+							"port": "52525",
+							"path": [
+								"api",
+								"Candidato",
+								"Img",
+								"upload",
+								"1049"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidato.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGhldXMubmFzY2kyMDAyQGhvdG1haWwuY29tIiwianRpIjoiMTA0OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA2Mjc2NzUsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.W4MM1FZEzKF9GG9vPvc0oZZRrie-WO1B9XqZeAFzPkc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"curso\": \"Desenvolvimento de Sistemas\",\r\n    \"formacaoAcademica\": \"Nenhum\",\r\n    \"matricula\": \"15121106\",\r\n    \"nome\": \"Matheus\",\r\n    \"sobrenome\": \"Emorge\",\r\n    \"cpf\": \"051.859.728-57\",\r\n    \"rg\": \"12.548.460-9\",\r\n    \"telefoneCandidato\": \"(11) 2919-2020\",\r\n    \"celularCandidato\": \"(11) 98631-6715\",\r\n    \"dataNascimento\": \"2020-09-14T00:00:00\",\r\n    \"visualizacao\": 0,\r\n    \"habilidadeCandidato\": [\r\n        {\r\n            \"IdHabilidade\": 1\r\n        },\r\n        {\r\n            \"IdHabilidade\": 2\r\n        }\r\n        ,{\r\n            \"IdHabilidade\": 4\r\n        }\r\n    ],\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Candidato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidato.AtualizarPorId [DEV]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGhldXMubmFzY2kyMDAyQGhvdG1haWwuY29tIiwianRpIjoiMTA0OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA2Mjc2NzUsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.W4MM1FZEzKF9GG9vPvc0oZZRrie-WO1B9XqZeAFzPkc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"curso\": \"Desenvolvimento de Sistemas\",\r\n    \"formacaoAcademica\": \"Nenhum\",\r\n    \"matricula\": \"15121106\",\r\n    \"nome\": \"Matheus\",\r\n    \"sobrenome\": \"Emorge\",\r\n    \"cpf\": \"051.859.728-57\",\r\n    \"rg\": \"12.548.460-9\",\r\n    \"telefoneCandidato\": \"(11) 2919-2020\",\r\n    \"celularCandidato\": \"(11) 98631-6715\",\r\n    \"dataNascimento\": \"2020-09-14T00:00:00\",\r\n    \"visualizacao\": 0,\r\n    \"idUsuarioNavigation\": {\r\n        \"email\": \"matheusatualizadoo@gmail.com\",\r\n        \"senha\": \"123\"\r\n    },\r\n    \"habilidadeCandidato\": [\r\n        {\r\n            \"IdHabilidade\": 1\r\n        },\r\n        {\r\n            \"IdHabilidade\": 2\r\n        },\r\n        {\r\n            \"IdHabilidade\": 4\r\n        }\r\n    ],\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Candidato/1049",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato",
+								"1049"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidato.MudarStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Candidato/Status?id=1050&idStatus=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato",
+								"Status"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1050"
+								},
+								{
+									"key": "idStatus",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candidatura",
+			"item": [
+				{
+					"name": "Candidatura.Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbmRpZGF0b0BnbWFpbC5jb20iLCJqdGkiOiIyMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA0NjIxNjIsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.DbiRsPIcp6-S06CEQDkpn6GXHZCmDPfLmshvHnTlyNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Candidatura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidatura.ListarPorCandidato",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbmRpZGF0b0BnbWFpbC5jb20iLCJqdGkiOiIyMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA0NjIxNjIsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.DbiRsPIcp6-S06CEQDkpn6GXHZCmDPfLmshvHnTlyNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Candidatura/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidatura",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidatura.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbmRpZGF0b0BnbWFpbC5jb20iLCJqdGkiOiIyMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA0NjIxNjIsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.DbiRsPIcp6-S06CEQDkpn6GXHZCmDPfLmshvHnTlyNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCandidato\": 15,\r\n    \"idVaga\": 2,\r\n    \"curriculo\": null,\r\n    \"visualizado\": false,\r\n    \"dataCriado\": \"2020-09-04T11:11:11\",\r\n    \"idCandidatoNavigation\": null,\r\n    \"idVagaNavigation\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Candidatura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidatura.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Candidatura/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidatura",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Empresa.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Empresa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Empresa/1050",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"1050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.Photo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://192.168.15.88:52525/api/Empresa/Img/1050",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"15",
+								"88"
+							],
+							"port": "52525",
+							"path": [
+								"api",
+								"Empresa",
+								"Img",
+								"1050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Matheus/Downloads/logo-ti.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.15.88:52525/api/Empresa/Img/upload/1050",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"15",
+								"88"
+							],
+							"port": "52525",
+							"path": [
+								"api",
+								"Empresa",
+								"Img",
+								"upload",
+								"1050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Foto\": \"string\",\r\n    \"Cnae\": \"4525-5\",\r\n    \"Cnpj\": \"93.007.326/0001-21\",\r\n    \"RazaoSocial\": \"Instagram Serviços Online\",\r\n    \"Descricao\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor pretium viverra suspendisse potenti. Vitae turpis massa sed elementum tempus.\",\r\n    \"EmailPublico\": \"instagram@webrede.com.br\",\r\n    \"TelefoneEmpresa\": \"(11) 2511-0952\",\r\n    \"CelularEmpresa\": \"(11) 98195-9192\",\r\n    \"Visualizacao\": 2302,\r\n    \"IdUsuarioNavigation\": \r\n    {\r\n        \"Email\": \"instagram@webrede.com.br\",\r\n        \"Senha\": \"123\"\r\n    },\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Empresa/1050",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"1050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.AtualizarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjMzNTYsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.o1nymM07FrEjuJQp5Ke479FlcsajBKDfPlFoj-qjapY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"foto\": \"string\",\r\n    \"cnae\": \"4525-6\",\r\n    \"cnpj\": \"93.007.326/0001-81\",\r\n    \"razaoSocial\": \"Consultoria Financeira Ltda\",\r\n    \"NomeFantasia\": \"Luana TI\",\r\n    \"telefoneEmpresa\": \"(11) 2511-0952\",\r\n    \"celularEmpresa\": \"(11) 98195-9192\",\r\n    \"Descricao\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor pretium viverra suspendisse potenti. Vitae turpis massa sed elementum tempus.\",\r\n    \"EmailPublico\": \"ti@luanaconsultoriafinanceiraltda.com.br\",\r\n    \"visualizacao\": 2302,\r\n    \"idUsuarioNavigation\": {\r\n        \"email\": \"ti@luanaconsultoriafinanceiraltda.com.br\",\r\n        \"senha\": \"785489\"\r\n    },\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Empresa/1050",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"1050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.AtualizarPorToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjMzNTYsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.o1nymM07FrEjuJQp5Ke479FlcsajBKDfPlFoj-qjapY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"foto\": \"string\",\r\n    \"cnae\": \"4525-6\",\r\n    \"cnpj\": \"93.007.326/0001-81\",\r\n    \"razaoSocial\": \"Consultoria Financeira Ltda\",\r\n    \"NomeFantasia\": \"Luana TI\",\r\n    \"telefoneEmpresa\": \"(11) 2511-0952\",\r\n    \"celularEmpresa\": \"(11) 98195-9192\",\r\n    \"Descricao\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor pretium viverra suspendisse potenti. Vitae turpis massa sed elementum tempus.\",\r\n    \"EmailPublico\": \"ti@luanaconsultoriafinanceiraltda.com.br\",\r\n    \"visualizacao\": 2302,\r\n    \"idUsuarioNavigation\": {\r\n        \"email\": \"ti@luanaconsultoriafinanceiraltda.com.br\",\r\n        \"senha\": \"785489\"\r\n    },\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Empresa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.MudarStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Empresa/Status?id=1050&idStatus=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"Status"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1050"
+								},
+								{
+									"key": "idStatus",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habilidade",
+			"item": [
+				{
+					"name": "Habilidade.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Habilidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Habilidade/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Habilidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade.ListarPorNome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Habilidade/pesquisarNome/.NET",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Habilidade",
+								"pesquisarNome",
+								".NET"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjMzNTYsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.o1nymM07FrEjuJQp5Ke479FlcsajBKDfPlFoj-qjapY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCriadoPor\": null,\r\n    \"nomeHabilidade\": \"teste\",\r\n    \"idCriadoPorNavigation\": null,\r\n    \"habilidadeCandidato\": [],\r\n    \"habilidadeVaga\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Habilidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NjM1MTUsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.bWWRuNcEK7mcH0Q8XsjG0pa6YJ-8f7X2UuHA1Zh3tdI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCriadoPor\": null,\r\n    \"nomeHabilidade\": \"teste1\",\r\n    \"idCriadoPorNavigation\": null,\r\n    \"habilidadeCandidato\": [],\r\n    \"habilidadeVaga\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Habilidade/827",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Habilidade",
+								"827"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NjM1MTUsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.bWWRuNcEK7mcH0Q8XsjG0pa6YJ-8f7X2UuHA1Zh3tdI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Habilidade/827",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Habilidade",
+								"827"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HabilidadeCandidato",
+			"item": [
+				{
+					"name": "HabilidadeCandidato.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeCandidato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeCandidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeCandidato.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeCandidato/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeCandidato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeCandidato.BuscarPorIdCandidato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeCandidato/candidato/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeCandidato",
+								"candidato",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeCandidato.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbmRpZGF0b0BnbWFpbC5jb20iLCJqdGkiOiIyMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA0NjM2MTgsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.yHTK4YmdMAlXsoG4IerOzwa7LtBqUr6n7ZkkZyd0OhM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idHabilidade\": 2,\r\n    \"idCandidato\": 4,\r\n    \"idCandidatoNavigation\": null,\r\n    \"idHabilidadeNavigation\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeCandidato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeCandidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeCandidato.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeCandidato/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeCandidato",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HabilidadeVaga",
+			"item": [
+				{
+					"name": "HabilidadeVaga.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeVaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeVaga.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeVaga/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeVaga",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeVaga.BuscarPorIdVaga",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeVaga/vaga/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeVaga",
+								"vaga",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeVaga.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idHabilidade\": 2,\r\n    \"idVaga\": 3,\r\n    \"idHabilidadeNavigation\": null,\r\n    \"idVagaNavigation\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeVaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HabilidadeVaga.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/HabilidadeVaga/24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"HabilidadeVaga",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notificacao",
+			"item": [
+				{
+					"name": "Notificacao.Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Notificacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Notificacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacao.BuscarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Notificacao/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Notificacao",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacao.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataNotificacao\": \"2020-09-01T13:35:00\",\r\n    \"mensagem\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Notificacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Notificacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacao.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Notificacao/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Notificacao",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacao.DeletarTudo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Notificacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Notificacao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Usuario.Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbmRpZGF0b0BnbWFpbC5jb20iLCJqdGkiOiI0NyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA1MzE3NjIsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.0gqL-iWIUsdFQ0tlHWV3tFwERceqCDgKBsB3ewqt39c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.BuscarPorEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NjQxNDksImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.U3t7rFZXDCnuVziMEk__Iefz07i2wGcJ2Er_lsNwIck",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuario/Email/candidato@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuario",
+								"Email",
+								"candidato@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.BuscarPorToken",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGhldXMubmFzY2kyMDAyQGhvdG1haWwuY29tIiwianRpIjoiMTA0OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJleHAiOjE2MDA2Mjc2NzUsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.W4MM1FZEzKF9GG9vPvc0oZZRrie-WO1B9XqZeAFzPkc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuario/Token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuario",
+								"Token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaga",
+			"item": [
+				{
+					"name": "Vaga.Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluc3RyYWRvckBnbWFpbC5jb20iLCJqdGkiOiIxNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MDA0NjEyMDMsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.EaNpdHOmcjqP_lDzmsNP8LPaZB-MQiEERFwKvuNtHR8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaga.ListarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaga.ListarPorEmpresa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga/Empresa/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"Empresa",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaga.ListarPorFiltro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga/Filtro?titulo=Cen&minSalario=1055&id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"Filtro"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "Cen"
+								},
+								{
+									"key": "minSalario",
+									"value": "1055"
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaga.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpQGx1YW5hY29uc3VsdG9yaWFmaW5hbmNlaXJhbHRkYS5jb20uYnIiLCJqdGkiOiIyMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MDA0NjM4MDQsImlzcyI6IkNvbmV4YW9WYWdhc0FQSSIsImF1ZCI6IkNvbmV4YW9WYWdhc0FQSSJ9.orPpTSW4VsLNydPHEZUNZoB7T9rCl5cMXze3XPQ4Ggk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idEmpresa\": \"1050\",\r\n    \"titulo\": \"Teste\",\r\n    \"salario\": 1000.0,\r\n    \"qualificacao\": \"Teste\",\r\n    \"dataCriado\": \"2020-09-04T11:11:11\",\r\n    \"dataExpiracao\": \"2020-11-04T11:11:11\",\r\n    \"cargaHoraria\": 6,\r\n    \"descricao\": \"Descrição teste\",\r\n    \"visualizacao\": 124,\r\n    \"idEmpresaNavigation\": null,\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    },\r\n    \"beneficioVaga\": [\r\n        {\r\n            \"IdBeneficio\": 12\r\n        }\r\n    ],\r\n    \"candidatura\": [],\r\n    \"habilidadeVaga\": [\r\n        {\r\n            \"IdHabilidade\": 1\r\n        },\r\n        {\r\n            \"IdHabilidade\": 2\r\n        }\r\n        ,{\r\n            \"IdHabilidade\": 3\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaga.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idEmpresa\": \"1050\",\r\n    \"titulo\": \"Teste atualizado\",\r\n    \"salario\": 1000.0,\r\n    \"qualificacao\": \"Teste\",\r\n    \"dataCriado\": \"2020-09-04T11:11:11\",\r\n    \"dataExpiracao\": \"2020-11-04T11:11:11\",\r\n    \"cargaHoraria\": 6,\r\n    \"descricao\": \"Descrição teste\",\r\n    \"visualizacao\": 124,\r\n    \"idEmpresaNavigation\": null,\r\n    \"IdEnderecoNavigation\":\r\n    {\r\n        \"Cep\": \"01201000\"\r\n    },\r\n    \"beneficioVaga\": [\r\n        {\r\n            \"IdBeneficio\": 2\r\n        }\r\n    ],\r\n    \"candidatura\": [],\r\n    \"habilidadeVaga\": [\r\n        {\r\n            \"IdHabilidade\": 3\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaga.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Vaga/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "Match.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Match",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Match"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Match.Refresh",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Match",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Match"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

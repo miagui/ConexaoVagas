@@ -1,0 +1,8 @@
+Modelo Conceitual:
+https://drive.google.com/file/d/1v9MaNyJWRdz4ZckyhKYQpLY230UXWne5/view?usp=sharing
+
+Modelo Lógico:
+https://drive.google.com/file/d/1filsT6n_Gqs4TN1_n4J_FiyhzWWB3gES/view?usp=sharing
+
+Modelo Físico:
+https://docs.google.com/spreadsheets/d/1xrSYDUXPD7UsxGkaKOQk3s43LTMxByfH_Bxz4WdLnM0/edit?usp=sharing
